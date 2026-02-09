@@ -6,6 +6,7 @@
 
 body{
     font-family: "Poppins", sans-serif;
+    background-color: #ffffff;
 }
 
 a{
@@ -173,9 +174,18 @@ header{
 
 /* Need */
 
+.need{
+    padding: 100px 0px 160px 0px;
+}
+
 .need-wrapper{
     display: flex;
     justify-content: space-between;
+}
+
+.need-wrapper > div{
+    position: relative;
+    width: 32%;
 }
 
 .need-wrapper > div > img{
@@ -183,9 +193,14 @@ header{
 }
 
 .need-wrapper > div > div{
-    background-color: green;
+    background-color: #ffffff;
     padding: 25px;
     width: 80%;
+    position: absolute;
+    bottom: -60px;
+    left: 0px;
+    /* x,y,blur,spread,color */
+    box-shadow: 0px 4px 4px 0px rgb(21 19 19 / 50%);
 }
 
 .need-wrapper > div > div > div{
@@ -197,6 +212,27 @@ header{
     font-size: 10px;
 }
 
+.need-wrapper > div span:not(a span){
+    font-size: 10px;
+}
+
+
+/* happy */
+
+.happy{
+    padding: 100px 0px;
+}
+
+.happy h2{
+    position: relative;
+    display: inline-block;
+}
+
+.happy h2 img{
+    position: absolute;
+    top: -45px;
+    left: -45px;
+}
 
 
 @media (min-width: 768px) {
@@ -225,6 +261,21 @@ header{
         width: 100%;
         text-align: center !important;
     }
+
+    .need-wrapper{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        /* flex-direction: column; */
+    }
+
+    .need-wrapper > div{
+        width: 45%;
+    }
+
+    .need-wrapper > div:nth-child(3){
+        margin-top: 70px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -236,6 +287,19 @@ header{
         width: 45%;
         margin-bottom: 30px;
     }
+
+    .search-wrapper > div h4{
+        font-size: 15px;
+    }
+
+    .header-wrapper{
+        flex-direction: column;
+        gap: 30px;
+    }
+   
+    .header-wrapper > div > div{
+        width: 90%;
+    }
 }
 
 
@@ -246,6 +310,14 @@ header{
 
     .search-wrapper > div {
         width: 100%;
+    }
+
+    .need-wrapper > div{
+        width: 100%;
+    }
+
+    .need-wrapper > div:nth-child(2){
+        margin-top: 70px;
     }
 }
 
